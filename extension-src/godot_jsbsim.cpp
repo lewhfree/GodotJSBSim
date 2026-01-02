@@ -17,6 +17,7 @@ GodotJSBSim::~GodotJSBSim() {
 void GodotJSBSim::_bind_methods() {
     // No methods to bind yet, but this function is required by GDCLASS
     ClassDB::bind_method(D_METHOD("SetRootDir", "rootDir"), &GodotJSBSim::SetRootDir);
+    ClassDB::bind_method(D_METHOD("GetRootDir"), &GodotJSBSim::GetRootDir);
 }
 
 void GodotJSBSim::_ready() {
@@ -30,8 +31,14 @@ void GodotJSBSim::_physics_process(double delta) {
 }
 
 void GodotJSBSim::SetRootDir(const String &dir) {
-    globalRootDir = SGPath(dir.utf8().get_data());  // allocate new path
-    fdmex->SetRootDir(globalRootDir);        // pass pointer
+    // globalRootDir = SGPath(dir.utf8().get_data());  // allocate new path
+    fdmex->SetRootDir(SGPath(dir.utf8().get_data()));        // pass pointer
 
     UtilityFunctions::print("set root dir to", dir);
+}
+
+String GodotJSBSim::GetRootDir(void) {
+    const SGPath tmp = fdmex->GetRootDir();
+    // UtilityFunctions::print("got dir", String(tmp->c_str()));
+    return String(tmp.c_str());
 }

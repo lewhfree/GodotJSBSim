@@ -3,7 +3,7 @@
 
 #include <godot_cpp/classes/node.hpp>
 #include <FGFDMExec.h>
-#include <simgear/misc/sg_path.hxx>
+// #include <simgear/misc/sg_path.hxx>
 namespace JSBSim {
     class FGFDMExec;
 }
@@ -15,7 +15,7 @@ class GodotJSBSim : public Node {
 
 protected:
     JSBSim::FGFDMExec* fdmex;
-    SGPath globalRootDir;
+    // SGPath globalRootDir;
     static void _bind_methods();
 
 public:
@@ -26,6 +26,7 @@ public:
     void _physics_process(double delta) override;
 
     void SetRootDir(const String &dir);
+    String GetRootDir(void);
 };
 
 }

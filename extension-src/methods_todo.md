@@ -1,3 +1,5 @@
+2/71
+
 - [x] FGFDMExec (FGPropertyManager *root=nullptr, std::shared_ptr< unsigned int > fdmctr=nullptr)
 - [] ~FGFDMExec ()
 - [] void 	AddTemplateFunc (const std::string &name, Element *el)
@@ -27,7 +29,7 @@
 - [] double 	GetPropertyValue (const std::string &property)
 - [] std::string 	GetPropulsionTankReport () const
 - [] auto 	GetRandomGenerator (void) const
-- [] const SGPath & 	GetRootDir (void) const
+- [x] const SGPath & 	GetRootDir (void) const
 - [] double 	GetSimTime (void) const
 - [] const SGPath & 	GetSystemsPath (void)
 - [] FGTemplateFunc_ptr 	GetTemplateFunc (const std::string &name)
@@ -61,7 +63,7 @@
 - [] bool 	SetOutputFileName (const int n, const std::string &fname)
 - [] bool 	SetOutputPath (const SGPath &path)
 - [] void 	SetPropertyValue (const std::string &property, double value)
-- [] void 	SetRootDir (const SGPath &rootDir)
+- [x] void 	SetRootDir (const SGPath &rootDir)
 - [] double 	Setsim_time (double cur_time)
 - [] bool 	SetSystemsPath (const SGPath &path)
 - [] void 	SetTrimMode (int mode)
