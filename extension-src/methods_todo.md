@@ -1,73 +1,73 @@
 2/71
 
 - [x] FGFDMExec (FGPropertyManager *root=nullptr, std::shared_ptr< unsigned int > fdmctr=nullptr)
-- [] ~FGFDMExec ()
-- [] void 	AddTemplateFunc (const std::string &name, Element *el)
-- [] void 	BuildPropertyCatalog (struct PropertyCatalogStructure *pcs)
-- [] void 	CheckIncrementalHold (void)
-- [] void 	DisableOutput (void)
-- [] void 	DoLinearization (int)
-- [] void 	DoTrim (int mode)
-- [] void 	EnableIncrementThenHold (int Timesteps)
-- [] void 	EnableOutput (void)
-- [] std::vector< std::string > 	EnumerateFDMs (void)
-- [] void 	ForceOutput (int idx=0)
-- [] const SGPath & 	GetAircraftPath (void)
-- [] auto 	GetChildFDM (int i) const
-- [] int 	GetDebugLevel (void) const
-- [] double 	GetDeltaT (void) const
-- [] const SGPath & 	GetEnginePath (void)
-- [] size_t 	GetFDMCount (void) const
-- [] unsigned int 	GetFrame (void) const
-- [] const SGPath & 	GetFullAircraftPath (void)
-- [] bool 	GetHoldDown (void) const
-- [] const std::string & 	GetModelName (void) const
-- [] std::string 	GetOutputFileName (int n) const
-- [] const SGPath & 	GetOutputPath (void)
-- [] std::vector< std::string > & 	GetPropertyCatalog (void)
-- [] std::shared_ptr< FGPropertyManager > 	GetPropertyManager (void) const
-- [] double 	GetPropertyValue (const std::string &property)
-- [] std::string 	GetPropulsionTankReport () const
-- [] auto 	GetRandomGenerator (void) const
+- [ ] ~FGFDMExec ()
+- [ ] void 	AddTemplateFunc (const std::string &name, Element *el)
+- [ ] void 	BuildPropertyCatalog (struct PropertyCatalogStructure *pcs)
+- [ ] void 	CheckIncrementalHold (void)
+- [ ] void 	DisableOutput (void)
+- [ ] void 	DoLinearization (int)
+- [ ] void 	DoTrim (int mode)
+- [ ] void 	EnableIncrementThenHold (int Timesteps)
+- [ ] void 	EnableOutput (void)
+- [ ] std::vector< std::string > 	EnumerateFDMs (void)
+- [ ] void 	ForceOutput (int idx=0)
+- [ ] const SGPath & 	GetAircraftPath (void)
+- [ ] auto 	GetChildFDM (int i) const
+- [ ] int 	GetDebugLevel (void) const
+- [ ] double 	GetDeltaT (void) const
+- [ ] const SGPath & 	GetEnginePath (void)
+- [ ] size_t 	GetFDMCount (void) const
+- [ ] unsigned int 	GetFrame (void) const
+- [ ] const SGPath & 	GetFullAircraftPath (void)
+- [ ] bool 	GetHoldDown (void) const
+- [ ] const std::string & 	GetModelName (void) const
+- [ ] std::string 	GetOutputFileName (int n) const
+- [ ] const SGPath & 	GetOutputPath (void)
+- [ ] std::vector< std::string > & 	GetPropertyCatalog (void)
+- [ ] std::shared_ptr< FGPropertyManager > 	GetPropertyManager (void) const
+- [ ] double 	GetPropertyValue (const std::string &property)
+- [ ] std::string 	GetPropulsionTankReport () const
+- [ ] auto 	GetRandomGenerator (void) const
 - [x] const SGPath & 	GetRootDir (void) const
-- [] double 	GetSimTime (void) const
-- [] const SGPath & 	GetSystemsPath (void)
-- [] FGTemplateFunc_ptr 	GetTemplateFunc (const std::string &name)
-- [] int 	GetTrimMode (void) const
-- [] bool 	GetTrimStatus (void) const
-- [] void 	Hold (void)
-- [] bool 	Holding (void)
-- [] double 	IncrTime (void)
-- [] void 	Initialize (const FGInitialCondition *FGIC)
-- [] bool 	IntegrationSuspended (void) const
-- [] bool 	LoadModel (const SGPath &AircraftPath, const SGPath &EnginePath, const SGPath &SystemsPath, const std::string &model, bool addModelToPath=true)
-- [] bool 	LoadModel (const std::string &model, bool addModelToPath=true)
-- [] bool 	LoadPlanet (const SGPath &PlanetPath, bool useAircraftPath=true)
-- [] bool 	LoadScript (const SGPath &Script, double deltaT=0.0, const SGPath &initfile=SGPath())
-- [] void 	PrintPropertyCatalog (void)
-- [] void 	PrintSimulationConfiguration (void) const
-- [] std::string 	QueryPropertyCatalog (const std::string &check, const std::string &end_of_line="\n")
-- [] void 	ResetToInitialConditions (int mode)
-- [] void 	Resume (void)
-- [] void 	ResumeIntegration (void)
-- [] bool 	Run (void)
-- [] bool 	RunIC (void)
-- [] bool 	SetAircraftPath (const SGPath &path)
-- [] void 	SetChild (bool ch)
-- [] void 	SetDebugLevel (int level)
-- [] void 	Setdt (double delta_t)
-- [] bool 	SetEnginePath (const SGPath &path)
-- [] void 	SetHoldDown (bool hd)
-- [] void 	SetLoggingRate (double rate)
-- [] bool 	SetOutputDirectives (const SGPath &fname)
-- [] bool 	SetOutputFileName (const int n, const std::string &fname)
-- [] bool 	SetOutputPath (const SGPath &path)
-- [] void 	SetPropertyValue (const std::string &property, double value)
-- [x] void 	SetRootDir (const SGPath &rootDir)
-- [] double 	Setsim_time (double cur_time)
-- [] bool 	SetSystemsPath (const SGPath &path)
-- [] void 	SetTrimMode (int mode)
-- [] void 	SetTrimStatus (bool status)
-- [] int 	SRand (void) const
-- [] void 	SuspendIntegration (void)
-- [] void 	Unbind (void)
+- [ ] double 	GetSimTime (void) const
+- [ ] const SGPath & 	GetSystemsPath (void)
+- [ ] FGTemplateFunc_ptr 	GetTemplateFunc (const std::string &name)
+- [ ] int 	GetTrimMode (void) const
+- [ ] bool 	GetTrimStatus (void) const
+- [ ] void 	Hold (void)
+- [ ] bool 	Holding (void)
+- [ ] double 	IncrTime (void)
+- [ ] void 	Initialize (const FGInitialCondition *FGIC)
+- [ ] bool 	IntegrationSuspended (void) const
+- [ ] bool 	LoadModel (const SGPath &AircraftPath, const SGPath &EnginePath, const SGPath &SystemsPath, const std::string &model, bool addModelToPath=true)
+- [ ] bool 	LoadModel (const std::string &model, bool addModelToPath=true)
+- [ ] bool 	LoadPlanet (const SGPath &PlanetPath, bool useAircraftPath=true)
+- [ ] bool 	LoadScript (const SGPath &Script, double deltaT=0.0, const SGPath &initfile=SGPath())
+- [ ] void 	PrintPropertyCatalog (void)
+- [ ] void 	PrintSimulationConfiguration (void) const
+- [ ] std::string 	QueryPropertyCatalog (const std::string &check, const std::string &end_of_line="\n")
+- [ ] void 	ResetToInitialConditions (int mode)
+- [ ] void 	Resume (void)
+- [ ] void 	ResumeIntegration (void)
+- [ ] bool 	Run (void)
+- [ ] bool 	RunIC (void)
+- [ ] bool 	SetAircraftPath (const SGPath &path)
+- [ ] void 	SetChild (bool ch)
+- [ ] void 	SetDebugLevel (int level)
+- [ ] void 	Setdt (double delta_t)
+- [ ] bool 	SetEnginePath (const SGPath &path)
+- [ ] void 	SetHoldDown (bool hd)
+- [ ] void 	SetLoggingRate (double rate)
+- [ ] bool 	SetOutputDirectives (const SGPath &fname)
+- [ ] bool 	SetOutputFileName (const int n, const std::string &fname)
+- [ ] bool 	SetOutputPath (const SGPath &path)
+- [ ] void 	SetPropertyValue (const std::string &property, double value)
+- [ x] void 	SetRootDir (const SGPath &rootDir)
+- [ ] double 	Setsim_time (double cur_time)
+- [ ] bool 	SetSystemsPath (const SGPath &path)
+- [ ] void 	SetTrimMode (int mode)
+- [ ] void 	SetTrimStatus (bool status)
+- [ ] int 	SRand (void) const
+- [ ] void 	SuspendIntegration (void)
+- [ ] void 	Unbind (void)
