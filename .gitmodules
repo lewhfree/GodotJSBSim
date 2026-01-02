@@ -1,0 +1,7 @@
+[submodule "godot-cpp"]
+	path = godot-cpp
+	url = https://github.com/godotengine/godot-cpp.git
+	branch = master
+[submodule "jsbsim"]
+	path = jsbsim
+	url = https://github.com/JSBSim-Team/jsbsim.git

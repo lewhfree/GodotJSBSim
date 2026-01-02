@@ -1,0 +1,5 @@
+CompileFlags:
+  Add:
+    - -I${PROJECT_ROOT}/godot-cpp/include
+    - -I${PROJECT_ROOT}/jsbsim/src
+

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c7u64tpv6byvb"]
+
+[node name="World" type="Node"]
+
+[node name="JSBSim" type="GodotJSBSim" parent="."]
