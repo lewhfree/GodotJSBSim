@@ -4,14 +4,15 @@ extends Node
 @onready var LabelNode: Label = $Label
 
 func _ready() -> void:
+	JSBSimUtils.install_jsbsim_files_to_user_dir()
 	#must be setup for relative paths
-	JSBSim.SetRootDir(ProjectSettings.globalize_path("res://JSBSim_files/"))
+	JSBSim.SetRootDir(ProjectSettings.globalize_path("user://JSBSim_files/"))
 	#must be setup to load airplanes
-	JSBSim.SetAircraftPath(ProjectSettings.globalize_path("res://JSBSim_files/aircraft/"))
+	JSBSim.SetAircraftPath(ProjectSettings.globalize_path("user://JSBSim_files/aircraft/"))
 	#ditto for systems
-	JSBSim.SetSystemsPath(ProjectSettings.globalize_path("res://JSBSim_files/systems/"))
+	JSBSim.SetSystemsPath(ProjectSettings.globalize_path("user://JSBSim_files/systems/"))
 	#ditto for engines
-	JSBSim.SetEnginePath(ProjectSettings.globalize_path("res://JSBSim_files/engine/"))
+	JSBSim.SetEnginePath(ProjectSettings.globalize_path("user://JSBSim_files/engine/"))
 	#set the time step. Godot defaults to 60fps, but you can change it
 	JSBSim.Setdt(1.0/120.0)
 	
