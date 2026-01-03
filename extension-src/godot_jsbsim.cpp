@@ -34,6 +34,7 @@ void GodotJSBSim::_bind_methods() {
     ClassDB::bind_method(D_METHOD("Run"), &GodotJSBSim::Run);
     ClassDB::bind_method(D_METHOD("GetPropertyValue", "property"), &GodotJSBSim::GetPropertyValue);
     ClassDB::bind_method(D_METHOD("PrintPropertyCatalog"), &GodotJSBSim::PrintPropertyCatalog);
+    ClassDB::bind_method(D_METHOD("SetPropertyValue", "property", "value"), &GodotJSBSim::SetPropertyValue);
 }
 
 void GodotJSBSim::_ready() {
@@ -117,4 +118,8 @@ double GodotJSBSim::GetPropertyValue(const String &property){
 
 void GodotJSBSim::PrintPropertyCatalog(void){
     fdmex->PrintPropertyCatalog();
+}
+
+void GodotJSBSim::SetPropertyValue(const String &property, double value){
+    fdmex->SetPropertyValue(std::string(property.utf8().get_data()), value);
 }

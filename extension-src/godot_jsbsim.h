@@ -51,6 +51,8 @@ public:
 
     double GetPropertyValue(const String &property);
     void PrintPropertyCatalog(void);
+
+    void SetPropertyValue(const String &property, double value);
     };
 }
 #endif // GODOT_JSBSIM_H

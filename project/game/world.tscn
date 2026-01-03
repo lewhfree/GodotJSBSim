@@ -11,13 +11,11 @@ script = ExtResource("1_tvmmn")
 
 [node name="Environment" parent="." instance=ExtResource("1_vn0wg")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5017493, -3.6836333)
-
 [node name="Airplane" parent="." instance=ExtResource("2_aseec")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8428396, -2.1744156)
+
+[node name="Camera3D" type="Camera3D" parent="Airplane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.846062)
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
