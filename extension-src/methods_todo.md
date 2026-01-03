@@ -1,4 +1,4 @@
-Loading an init conditions file is supported. std::shared_ptr< FGInitialCondition > 	GetIC (void) const
+Loading an init conditions file is supported. std::shared_ptr< FGInitialCondition > 	GetIC (void) const then pipes into load()
 
 - [x] FGFDMExec (FGPropertyManager *root=nullptr, std::shared_ptr< unsigned int > fdmctr=nullptr)
 - [ ] ~FGFDMExec ()

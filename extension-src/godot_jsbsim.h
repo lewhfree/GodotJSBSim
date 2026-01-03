@@ -45,6 +45,12 @@ public:
     bool LoadModel(const String &model, bool addModelToPath);
 
     bool LoadInitFile(const String &path, bool isRelativeToAircraftPath);
+
+    bool RunIC(void);
+    bool Run(void);
+
+    double GetPropertyValue(const String &property);
+    void PrintPropertyCatalog(void);
     };
 }
 #endif // GODOT_JSBSIM_H

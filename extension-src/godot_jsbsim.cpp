@@ -30,6 +30,10 @@ void GodotJSBSim::_bind_methods() {
     ClassDB::bind_method(D_METHOD("SRand"), &GodotJSBSim::SRand);
     ClassDB::bind_method(D_METHOD("LoadModel", "model", "addModelToPath"), &GodotJSBSim::LoadModel);
     ClassDB::bind_method(D_METHOD("LoadInitFile", "path", "isRelativeToAircraft"), &GodotJSBSim::LoadInitFile);
+    ClassDB::bind_method(D_METHOD("RunIC"), &GodotJSBSim::RunIC);
+    ClassDB::bind_method(D_METHOD("Run"), &GodotJSBSim::Run);
+    ClassDB::bind_method(D_METHOD("GetPropertyValue", "property"), &GodotJSBSim::GetPropertyValue);
+    ClassDB::bind_method(D_METHOD("PrintPropertyCatalog"), &GodotJSBSim::PrintPropertyCatalog);
 }
 
 void GodotJSBSim::_ready() {
@@ -95,5 +99,22 @@ bool GodotJSBSim::LoadModel(const String &model, bool addModelToPath){
 }
 
 bool GodotJSBSim::LoadInitFile(const String &path, bool isRelativeToAircraftPath) {
-return fdmex->GetIC()->Load(SGPath(path.utf8().get_data()), isRelativeToAircraftPath);
+    bool tmp = fdmex->GetIC()->Load(SGPath(path.utf8().get_data()), isRelativeToAircraftPath);
+    return tmp;
+}
+
+bool GodotJSBSim::RunIC(void) {
+    return fdmex->RunIC();
+}
+
+bool GodotJSBSim::Run(void) {
+    return fdmex->Run();
+}
+
+double GodotJSBSim::GetPropertyValue(const String &property){
+    return fdmex->GetPropertyValue(std::string(property.utf8().get_data()));
+}
+
+void GodotJSBSim::PrintPropertyCatalog(void){
+    fdmex->PrintPropertyCatalog();
 }

@@ -12,11 +12,18 @@ func _ready() -> void:
 	$JSBSim.SetEnginePath(ProjectSettings.globalize_path("res://JSBSim_files/engine/"))
 	print($JSBSim.GetEnginePath())
 	$JSBSim.Setdt(1.0/60.0)
-	print($JSBSim.GetDeltaT())
-	print($JSBSim.SRand())
-	print($JSBSim.LoadModel("c172p", true))
-	print($JSBSim.LoadInitFile("reset00", true))
+	print("DeltaT: ", $JSBSim.GetDeltaT())
+	print("SRand: ", $JSBSim.SRand())
+	print("Loaded model: ", $JSBSim.LoadModel("c172p", true))
+	print("Load init file: ", $JSBSim.LoadInitFile("reset01", true))
+	$JSBSim.PrintPropertyCatalog()
+	print("RUNIC ", $JSBSim.RunIC())
+	# for i in range(10):
+	# 	print("RUNNORM ", i, ": ", $JSBSim.Run())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+func _physics_process(_delta: float) -> void:
+	# print($JSBSim.Run())
+	print($JSBSim.GetPropertyValue("velocities/vc-kts"))
+	
+	
