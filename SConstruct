@@ -12,7 +12,12 @@ debug_or_release = "release" if env["target"] == "template_release" else "debug"
 ROOT = os.getcwd()
 JSBSIM_ROOT = os.path.join(ROOT, "jsbsim")
 JSBSIM_BUILD = os.path.join(JSBSIM_ROOT, "build", "src")
-JSBSIM_LIB = os.path.join(JSBSIM_BUILD, "libJSBSim.so")
+JSBSIM_LIB = ""
+
+if platform == "linux":
+    JSBSIM_LIB = os.path.join(JSBSIM_BUILD, "libJSBSim.so.1")
+elif platform == "android":
+    JSBSIM_LIB = os.path.join(JSBSIM_BUILD, "libJSBSim.so")
 
 EXT_SRC = os.path.join(ROOT, "extension-src")
 EXTENSION_PATH = glob("project/addons/*/*.gdextension")[0]

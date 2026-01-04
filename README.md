@@ -8,7 +8,7 @@
 - Cmake
 - Appropriate build tools for your platform
     - Make and a C/C++ compiler for *nix
-    - Android NDK full install for Android
+    - Android NDK full install for Android (See [docs/ANDROID.md](docs/ANDROID.md))
     - Other platforms you're on your own
 
 ## Build:
@@ -33,6 +33,8 @@
 
 To see what JSBSim::FGFDMExec methods have an equivilant, and notes for important ones (like loadmodel()), see [the methods_todo file](extension-src/methods_todo.md) </br>
 I will be trying to match the GDscript api as closely to the native c++ JSBSim api as possible, but at some point, I will stop. 
+
+The android build is working, but it is janky because jsbsim was never built to be ran on android. It wouldn't be that hard of a PR to generate, but for right now, we'll just force include headers that should exist for android (it complies with bsd sockets and stuff like that) (linux enough). Other than that, android should work great. You have to have the android export templates installed in godot to use. 
 
 ## Thanks/Licences
 
