@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7u64tpv6byvb"]
+[gd_scene load_steps=6 format=3 uid="uid://c7u64tpv6byvb"]
 
-[ext_resource type="Script" uid="uid://cswim2f7twwha" path="res://game/world.gd" id="1_tvmmn"]
+[ext_resource type="Script" uid="uid://bu0qr7l56tu14" path="res://game/world.gd" id="1_tvmmn"]
 [ext_resource type="PackedScene" uid="uid://c2xuherrowsss" path="res://game/environment.tscn" id="1_vn0wg"]
 [ext_resource type="PackedScene" uid="uid://bufs6n2mhy30w" path="res://game/airplane.tscn" id="2_aseec"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tvmmn"]
+size = Vector3(20000, -0.2, 20000)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xpgs"]
+albedo_color = Color(0.047058824, 1, 0.37254903, 1)
+uv1_scale = Vector3(100, 100, 100)
+uv1_triplanar = true
 
 [node name="World" type="Node"]
 script = ExtResource("1_tvmmn")
@@ -10,13 +18,19 @@ script = ExtResource("1_tvmmn")
 [node name="JSBSim" type="GodotJSBSim" parent="."]
 
 [node name="Environment" parent="." instance=ExtResource("1_vn0wg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0663886, 0)
 
 [node name="Airplane" parent="." instance=ExtResource("2_aseec")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8428396, -2.1744156)
 
 [node name="Camera3D" type="Camera3D" parent="Airplane"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.846062)
+transform = Transform3D(1, 0, 0, 0, 0.9961152, 0.08805982, 0, -0.08805982, 0.9961152, 0, 0.20911455, 4.846062)
+far = 50000.0
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_tvmmn")
+surface_material_override/0 = SubResource("StandardMaterial3D_4xpgs")

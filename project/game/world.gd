@@ -27,9 +27,17 @@ func _physics_process(_delta: float) -> void:
 	#keep this function as minimal as possible. It should be able to run at stable 120hz
 	JSBSim.Run()
 
-func _process(delta: float):
+func _process(_delta: float):
 	#simple hud
+	var rot = $Airplane.rotation
+	rot = Vector3(JSBSim.GetPropertyValue("attitude/pitch-rad"), JSBSim.GetPropertyValue("attitude/heading-true-rad"), JSBSim.GetPropertyValue("attitude/roll-rad"))
+	$Airplane.rotation = rot
+	
+	var pos = $Airplane.position
+	pos = Vector3(pos.x, JSBSim.GetPropertyValue("position/geod-alt-ft") * 0.3048, pos.x)
+	$Airplane.position = pos
+	
 	LabelNode.text = "Height above sea level: " + str(JSBSim.GetPropertyValue("position/h-sl-ft"))
-	LabelNode.text += "\nPitch in radians: " + str(JSBSim.GetPropertyValue("attitude/theta-rad"))
+	LabelNode.text += "\nPitch in deg " + str(57.2958 * JSBSim.GetPropertyValue("attitude/pitch-rad"))
 	LabelNode.text += "\nCalibrated Airspeed knots: " + str(JSBSim.GetPropertyValue("velocities/vc-kts"))
 	LabelNode.text += "\nPilot GForce(?): " + str(JSBSim.GetPropertyValue("accelerations/n-pilot-z-norm"))
