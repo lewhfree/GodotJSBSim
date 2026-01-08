@@ -90,6 +90,20 @@ offset_bottom = 23.0
 data_directory = "res://terrain3dData"
 material = SubResource("Terrain3DMaterial_fhh06")
 assets = SubResource("Terrain3DAssets_ibklf")
+collision_mode = 0
 show_checkered = true
+physics_interpolation_mode = 2
 top_level = true
 metadata/_edit_lock_ = true
+
+[node name="fps" type="Label" parent="."]
+offset_left = 444.0
+offset_top = 1.0
+offset_right = 484.0
+offset_bottom = 24.0
+
+[node name="fps2" type="Label" parent="."]
+offset_left = 441.0
+offset_top = 53.0
+offset_right = 481.0
+offset_bottom = 76.0
