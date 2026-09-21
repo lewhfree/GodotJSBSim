@@ -14,9 +14,9 @@
 ## Build:
 ```
     #Get source
-    git clone --recursive https://github.com/lewhfree/GDJSBSim
+    git clone --recursive https://github.com/lewhfree/GodotJSBSim
 
-    cd GDJSBSim/jsbsim
+    cd GodotJSBSim/jsbsim
 
     mkdir build && cd build
     cmake ..
