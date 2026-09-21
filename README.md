@@ -2,14 +2,14 @@
 
 ## Requirements
 
-- I use Godot 4.5 because that is what comes in my package manager.
+- I use Godot 4.5 because that is what comes in my package manager. Tested working with Godot 4.7.
 - Scons build tool
 - Git
 - Cmake
 - Appropriate build tools for your platform
     - Make and a C/C++ compiler for *nix
     - Android NDK full install for Android (See [docs/ANDROID.md](docs/ANDROID.md))
-    - Other platforms you're on your own
+    - Other platforms, you're on your own.
 
 ## Build:
 ```
@@ -19,7 +19,7 @@
     cd GodotJSBSim/jsbsim
 
     mkdir build && cd build
-    cmake ..
+    cmake .. -DBUILD_SHARED_LIBS=ON
     make
 
     cd ../..
@@ -38,8 +38,8 @@ The android build is working, but it is janky because jsbsim was never built to 
 
 ## Thanks/Licences
 
-Thanks to [nathanfranke](https://github.com/nathanfranke) for the [gdextension](https://github.com/nathanfranke/gdextension) starter code licensed under the unlicense
+Thanks to [nathanfranke](https://github.com/nathanfranke) for the [gdextension](https://github.com/nathanfranke/gdextension) starter code licensed under the unlicense.
 
 Thanks to [JSBSim](https://github.com/JSBSim-Team) for the great library. They license under LGPL 2.1, which this game complies with.
 
-This library is licensed (or unlicensed I guess) under the unlicense (see LICENSE). You can do anything with this codebase, it is public domain.
+This library is licensed under the unlicense (see LICENSE). You can do anything with this codebase, it is public domain.
